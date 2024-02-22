@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패밀리스카이</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
+        /* main Styles */
+
+        html { box-sizing: border-box; }
+
+        *, *:before, *:after { box-sizing: inherit; }
+
+        body {
+            background: #fafafa;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        a { text-decoration: none; }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+
+        h1 { text-align:center; margin-top:150px;}
+
+        /* Navigation Styles */
+
+        nav { background: #2ba0db; }
+
+        nav ul {
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            padding: 15px 14px;
+            transition: 0.3s linear;
+        }
+
+        nav ul li:hover { background: #126d9b; }
+
+        nav ul li ul {
+            border-bottom: 5px solid #2ba0db;
+            display: none;
+            position: absolute;
+            width: 250px;
+        }
+
+        nav ul li ul li {
+            border-top: 1px solid #444;
+            display: block;
+        }
+
+        nav ul li ul li:first-child { border-top: none; }
+
+        nav ul li ul li a {
+            background: #373737;
+            display: block;
+            padding: 10px 14px;
+        }
+
+        nav ul li ul li a:hover { background: #126d9b; }
+
+        nav .fa.fa-angle-down { margin-left: 6px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="main.html">패밀리스카이</a></li>
+                <li> <a href="#tool">장비소개<i class='fa fa-angle-down'></i></a></li>
+                <li class='sub-menu'> <a href="#">업무사진<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">?월?일</a></li>
+                        <li><a href="#">?월?일</a></li>
+                        <li><a href="#">?월?일</a></li>
+                        <li><a href="#">?월?일</a></li>
+                        <li><a href="#">?월?일</a></li>
+                        <li><a href="#">?월?일</a></li>
+                    </ul>
+                </li>
+                <li><a href="tel:010-7156-5174">전화하기</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $('nav li').hover(
+            function() {
+                $('ul', this).stop().slideDown(200);
+            },
+            function() {
+                $('ul', this).stop().slideUp(200);
+            }
+        );
+    </script>
+
+    <CENTER><img src="car2.png"></CENTER>
+    
+    <div id="tool">
+        <CENTER><h1>장비소개</h1></CENTER>
+        <img src="car3.jpg" style="width: 550px;">
+        <img src="car6.jpg" style="width: 700px;">
+        <CENTER><b>스카이 3.5t</b></CENTER>
+    </div>
+</body>
+<hr>
+<footer>
+    <p>상호명 : 원주패밀리스카이</p>
+    <p>주소 : 강원도 원주시 시청로40</p>
+    <p>이메일 : family770915@naver.com</p>
+    <p>전화번호 : 010-7156-5174</p>
+</footer>
+</html>
